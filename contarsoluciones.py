@@ -10,8 +10,9 @@ class CountSolutions(cp_model.CpSolverSolutionCallback):
     def on_solution_callback(self): 
        self.__solution_count += 1
 
-    def solution_count(self):
-        return self.__solution_countsolution_printer = CountSolutions()
+    def solution_count(self): # getter
+        return self.__solution_count 
+solution_printer = CountSolutions()
 
 # Instantiate model and solver
 model = cp_model.CpModel()
